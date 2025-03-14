@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.login {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.container {
+  /* background-image: url("../../assets/dotted-world-map-vector-37.png"); */
+  background-image: url("../../assets/world-dotted-map.png");
+  background-color: #0e1d34;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #0e1d34c1;
+  gap: 450px;
+  padding: 24px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.main-menu {
+  display: flex;
+  gap: 50px;
+}
+.main-menu li {
+  list-style-type: none;
+}
+.main-menu li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #c3cfda;
+  font-weight: 500;
+  /* padding: 10px; */
+  line-height: 30px;
+  width: fit-content;
+  /* height: 100%; */
+}
+/* .main-menu li a:hover {
+  color: rgb(255, 255, 255);
+} */
+.main-menu .listDrop1 a {
+  background-color: #0d43ff;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: white;
+}
+.main-menu .listDrop1:hover a {
+  background-color: #002fda;
+}
+
+.main-menu li:nth-child(5) {
+  position: relative;
+}
+
+.sub-menu {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 8px;
+  top: 30px;
+  width: 146px;
+  display: none;
+  /* Độ mờ ban đầu */
+  /* visibility: hidden;
+  opacity: 0; */
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 999;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sub-menu li {
+  line-height: 40px;
+  margin-left: 16px;
+}
+.sub-menu li a {
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+}
+.sub-menu li:hover > a {
+  color: #0d43ff;
+}
+
+.main-menu li:nth-child(5):hover .sub-menu {
+  display: block;
+  /* visibility: visible;
+  opacity: 1; */
+  transform: translateY(0);
+}
+.sub-menu-second {
+  position: absolute;
+  left: -155px;
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  top: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.main-menu-second:hover .sub-menu-second {
+  opacity: 1;
+  transform: translateX(0);
+}
+.sub-menu-second li:hover a {
+  color: #0d43ff;
+}
+.sub-menu-second {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}

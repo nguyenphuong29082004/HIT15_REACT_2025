@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.about {
+  padding: 70px;
+  display: flex;
+  gap: 50px;
+}
+.about-left * {
+  margin-bottom: 12px;
+}
+.about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #001973;
+}
+.about-left > p:first-of-type {
+  font-size: 16px;
+}
+.about-left-title h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #001973;
+}
+.about-left-title p {
+  font-size: 15px;
+}
+.about-icon {
+  font-size: 50px;
+  color: #0d43ff;
+}
+.about-left-element {
+  display: flex;
+  gap: 20px;
+}
+.about-right {
+  position: relative;
+}
+.about-img {
+  width: 650px;
+  height: auto;
+}
+
+.about-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.about-right {
+  position: relative;
+}
+.wrp_video {
+  position: relative;
+}
+.circle {
+  position: absolute;
+  background-color: #0d41ff;
+  width: 5em;
+  border-radius: 50%;
+  height: 5em;
+  top: 10px;
+  left: 16px;
+  /* z-index: 999; */
+}
+.circle-video {
+  width: 7em;
+  border-radius: 50%;
+  height: 7em;
+  padding: 20px;
+  animation: pulse 1.5s infinite;
+  background-color: #0d43ff;
+  border: 2px solid #0d43ff;
+  border-radius: 100%;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  z-index: 1;
+}
+.sub-circle-video {
+  width: 7em;
+  border-radius: 50%;
+  height: 7em;
+  padding: 20px;
+  background-color: #0d41ff4d;
+  border: 2px solid #0d41ff29;
+  border-radius: 100%;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+}
+.main-wrp-video {
+  position: absolute;
+  top: calc(50% - 70px);
+  left: calc(50% - 40px);
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  /* 50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    } */
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+.icon-triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid #f6f6f6; /* Viền bên trái trong suốt */
+  border-top: 20px solid transparent; /* Viền bên phải trong suốt */
+  border-bottom: 20px solid transparent;
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 55%; /* Thêm để căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%);
+}
+

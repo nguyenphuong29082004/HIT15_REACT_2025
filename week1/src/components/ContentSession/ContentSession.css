@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-csession{
+    display: flex;
+    padding: 70px;
+    gap: 50px;
+}
+.title-csession {
+  color: #001973;
+  font-weight: 700;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.icon-csession {
+  font-size: 50px; /* Thay đổi kích thước biểu tượng */
+  color: #0d43ff;
+}
+.description {
+  font-size: 15px;
+  color: color-mix(in srgb, #212529, transparent 30%);
+}
+.link-csession {
+  display: flex;
+  align-items: center;
+  color: color-mix(in srgb, #212529, transparent 30%);
+  transition: 0.3s;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+}
+.sub-container:hover .title-csession,
+.sub-container:hover .link-csession {
+  color: #0d42ff;
+}
+
+.sub-container{
+    display: flex;
+    gap: 24px;
+}
+.title-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
