@@ -44,9 +44,9 @@ function Footer(){
                         <ul>
                             <li><a href="#">Web Design</a></li>
                             <li><a href="#">Web Development</a></li>
-                            <li><a href="3">Product Management</a></li>
                             <li><a href="#">Marketing</a></li>
                             <li><a href="#">Graphic Design</a></li>
+                             <li><a href="3">Product Management</a></li>
                         </ul>
                     </div>
                     <div className="footer-contact">

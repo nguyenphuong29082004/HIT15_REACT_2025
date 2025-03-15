@@ -60,10 +60,10 @@
   .menu {
     width: max-content;
   }
-.banner {
+  .banner {
     margin: 0px 32px;
     padding-top: 230px;
-}
+  }
   .main-menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -82,7 +82,7 @@
     padding: 0px 35px 70px;
   }
   .about-img {
-    width: 356px;
+    width: 300px;
   }
   .footer-top {
     flex-direction: column;
@@ -95,6 +95,22 @@
   }
   .footer-userlink,
   .footer-sercices {
-    line-height: 30px;
+    line-height: 27px;
+  }
+  .footer-element2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-userlink ul,
+  .footer-sercices ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-sercices ul li:nth-child(5) {
+    width: 157px;
+  }
+  .footer-contact div {
+    margin-bottom: 0px;
+    line-height: 33px;
   }
 }
