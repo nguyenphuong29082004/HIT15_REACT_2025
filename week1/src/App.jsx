@@ -6,7 +6,7 @@ import Header from './components/Header/Header';
 import ContentSession from "./components/ContentSession/ContentSession"
 import AboutUs from "./components/AboutUs/AboutUs"
 import Footer from "./components/Footer/Footer"
-
+import "./components/responsive.css"
 function App() {
   return (
     <>

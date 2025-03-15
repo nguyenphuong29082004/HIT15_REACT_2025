@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .about {
-  padding: 70px;
+  padding: 0px 70px 70px;
   display: flex;
   gap: 50px;
 }
@@ -122,4 +122,3 @@
   left: 55%; /* Thêm để căn giữa theo chiều ngang */
   transform: translate(-50%, -50%);
 }
-

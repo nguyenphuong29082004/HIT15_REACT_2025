@@ -44,9 +44,9 @@
   width: fit-content;
   /* height: 100%; */
 }
-/* .main-menu li a:hover {
+.main-menu li a:hover {
   color: rgb(255, 255, 255);
-} */
+}
 .main-menu .listDrop1 a {
   background-color: #0d43ff;
   padding: 10px 20px;
