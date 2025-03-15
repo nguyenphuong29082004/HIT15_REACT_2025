@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+.navigation-phone {
+  display: none;
+}
 .login {
   font-size: 30px;
   font-weight: 700;
