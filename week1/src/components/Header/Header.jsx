@@ -1,75 +1,39 @@
-import React from "react";
-import Banner from "../Banner/Banner";
-import "./Header.css";
+// import React from "react";
 
-function Header (){
-    return(
-    <>
-    <div className="container">
+import { useState } from "react";
+const Counter = (props) => {
+    const [counter, setCounter] = useState(1);
 
-
-        {/*=====================MENU > 575============= */}
-        <div className="menu">
-            <p class="login">Logis</p>
-            <ul className="main-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Dropdown</a>
-                    <ul className="sub-menu">
-                        <li><a href="">Dropdown 1</a></li>
-                        <li className="main-menu-second"><a href="">Deep Dropdown</a>
-                            <ul className="sub-menu-second">
-                                <li><a href="">Deep Dropdown 1</a></li>
-                                <li><a href="">Deep Dropdown 2</a></li>
-                                <li><a href="">Deep Dropdown 3</a></li>
-                                <li><a href="">Deep Dropdown 4</a></li>
-                                <li><a href="">Deep Dropdown 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">Dropdown 2</a></li>
-                        <li><a href="">Dropdown 3</a></li>
-                        <li><a href="">Dropdown 4</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact</a></li>
-                <li  class="listDrop1"><a href="#">Get a Quote</a></li>
-            </ul>
+    const handleCounter = () => {
+        setCounter(counter +1 );
+    }
+    const cong3 = () => {
+        setCounter(prev => (prev +1 ) );
+        setCounter(prev => (prev +1 ) );
+        setCounter(prev => (prev +1 ) );
+    }
+    const tru = () =>{
+        setCounter(counter - 1);
+    }
+    const chia = () =>{
+        setCounter(counter / 3);
+    }
+    const nhan = () =>{
+        setCounter(counter * 3);
+    }
+    console.log(counter);
+    return (
+        
+        <div className="counter" >
+            <p>Hello {props.title} </p>
+            <h1 style={{marginLeft: "12px"}}>{counter}</h1>
+            {/* <h1>{JSON.stringify(counter)}</h1> */}
+            <button onClick={handleCounter} style={{marginLeft: "12px"}}>Tang</button>
+            <button onClick={tru} style={{marginLeft: "12px"}}>Tru</button>
+            <button onClick={chia} style={{marginLeft: "12px"}}>Chia</button>
+            <button onClick={nhan} style={{marginLeft: "12px"}}>Nhan</button>
+            <button onClick={cong3} style={{marginLeft: "12px"}}>Cong 3</button>
         </div>
-        {/* ===========END=========== */}
-
-        {/* =========MENU PHONE======== */}
-        <div className="navigation-phone">
-            <div className="menuToggle">
-                <p class="login">Logis</p>
-                <p class="listDrop1"><a href="#">Get a Quote</a></p>
-                <div className="demo">
-                    <input type="checkbox" name="" id="" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <div class="overlay"></div>
-                    <div className="main-menu-phone">
-                        <ul className="sub-menu-phone">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Dropdown</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        {/* ===========ENDEND============= */}
-
-        <Banner></Banner>
-    </div>
-    </>
-);
+    )
 }
-
-export default Header
+export default Counter
