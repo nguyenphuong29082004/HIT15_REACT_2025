@@ -21,7 +21,7 @@ const Counter = (props) => {
     const nhan = () =>{
         setCounter(counter * 3);
     }
-    console.log(counter);
+    // console.log(counter);
     return (
         
         <div className="counter" >

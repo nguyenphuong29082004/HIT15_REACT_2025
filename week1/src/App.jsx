@@ -5,6 +5,7 @@ import Counter from './components/Header/Header';
 import TextFiled from './components/Header/Text_filed';
 import PostItem from './components/PostItem';
 import Card from './components/card';
+import TaskList from './components/Demo_state';
 
 function App() { 
   const user = {
@@ -97,6 +98,11 @@ function App() {
       }}
       />
     <button onClick={addPeople}>Theem</button>
+
+    <br /><br /><br />
+    <br /><br /><br />
+    <h1 style={{color: "red"}}>Them cong viec</h1>
+      <TaskList/>
     </>
   );
 }
