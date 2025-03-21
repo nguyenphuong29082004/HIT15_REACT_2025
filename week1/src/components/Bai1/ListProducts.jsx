@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import { FaBox } from "react-icons/fa";
 import "./style.css"
 function ListProducts({onAddToCart}) {
   const products = [
@@ -23,17 +23,19 @@ function ListProducts({onAddToCart}) {
 
   return (
     <>  
-          <h2>Danh sách sản phẩm </h2>
+      <div className="container-products">
+        <h3><FaBox className="icon-box" /> Danh sách sản phẩm </h3>
         <div>
             {/* <div>{props.name} - {props.price} VND</div> */}
             {products.map((item) => (
-              <div key={item.id}>
-                  {item.name} - {item.price.toLocaleString()} x {item.quantity}
-                  <button className="btnAddToCart" onClick={() => onAddToCart(item)}>Thêm giỏ hàng</button>
+              <div key={item.id} className="row-product">
+                <p>{item.name} - {item.price.toLocaleString()}</p>
+                <button className="btnAddToCart" onClick={() => onAddToCart(item)}>Thêm giỏ hàng</button>
               </div>
             ))}
-          
         </div>
+      </div>
+        
     </>
   )
 }

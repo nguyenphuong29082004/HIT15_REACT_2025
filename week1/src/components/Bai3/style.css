@@ -31,7 +31,7 @@
 }
 
 .container-toggle.on .text {
-  transform: translateX(124px);
+  transform: translateX(100px);
 }
 
 .container-toggle.on .btn-toggle {

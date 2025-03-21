@@ -3,6 +3,8 @@ import ListProducts from './components/Bai1/ListProducts';
 import Cart from './components/Bai1/Cart';
 import TableData from './components/Bai2';
 import BtnToggle from './components/Bai3';
+import "./App.css"
+import { BsCart4 } from "react-icons/bs";
 
 
 function App() { 
@@ -47,7 +49,7 @@ function App() {
   return (
     <>
       <h1>Bài 1</h1>
-      <div className="title">Giỏ hàng sản phẩm ({totalQuantity} sản phẩm) </div>
+      <h2 className="title"><BsCart4 className='icon-cart'/> Giỏ hàng ({totalQuantity} sản phẩm) </h2>
       <div>
         <ListProducts onAddToCart={addToCart} />
       </div>
@@ -59,12 +61,12 @@ function App() {
         />
       </div>
 
-      <h2>Bài 2</h2>
+      <h1>Bài 2</h1>
       <div>
         <TableData />
       </div>
 
-      <h2>Bài 3</h2>
+      <h1>Bài 3</h1>
       <div>
         <BtnToggle />
       </div>
