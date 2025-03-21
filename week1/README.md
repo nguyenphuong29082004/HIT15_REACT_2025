@@ -22,3 +22,7 @@ PROPS
 {products.map((item, key) => (
 <Bai1 key={key} name={item[0]} price={item[1]} />
 ))}
+
+  {/* {products.map((item,key) => (
+        <ListProducts key={key} {...item}/>
+      ))} */}

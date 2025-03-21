@@ -1,0 +1,39 @@
+.container-toggle {
+  background-color: #01beff;
+  padding: 8px 12px 8px 12px;
+  width: max-content;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  /* transition: transform 0.3s ease-in-out; */
+}
+/* .container-toggle.on {
+  flex-direction: row-reverse;
+  transition: transform 0.3s ease-in-out;
+} */
+.text {
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  width: 50px;
+}
+.btn-toggle {
+  background-color: #01beff;
+  width: 20px;
+  height: 20px;
+  border: 24px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Hiệu ứng mượt mà khi di chuyển */
+  position: relative;
+}
+
+.container-toggle.on .text {
+  transform: translateX(124px);
+}
+
+.container-toggle.on .btn-toggle {
+  transform: translateX(-100px);
+}
