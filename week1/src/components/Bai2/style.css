@@ -1,5 +1,5 @@
 table {
-  width: 100%;
+  width: 98%;
   border-collapse: collapse;
 }
 table th {
@@ -8,10 +8,11 @@ table th {
   text-align: center;
 }
 table tbody tr:nth-child(odd) {
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2;
 }
-table td,th{
-  border: 1px solid #ccc; 
+table td,
+th {
+  border: 1px solid #ccc;
   padding: 8px;
 }
 
@@ -19,11 +20,10 @@ table td {
   text-align: left; /* Căn trái nội dung */
 }
 
-
 table tbody tr:last-child {
   border-bottom: 4px solid #019879; /* Ví dụ: Thêm đường viền trên */
   background-color: #f9f9f9; /* Ví dụ: Thay đổi màu nền */
 }
 table tbody tr:hover {
-    color: #019879;
+  color: #019879;
 }
