@@ -1,16 +1,17 @@
 @media (max-width: 576px) {
   .container-products {
-    padding: 16px 10px;
+    padding: 16px 4px;
   }
   .row-product,
   .row-cart {
-    gap: 8px;
+    gap: 4px;
   }
   .btnAddToCart {
     padding: 8px 8px 8px 8px;
   }
   .container-cart {
-    padding: 15px 8px 16px 8px;
+    padding: 8px 0px;
+    width: 320px;
   }
   .row-cart button {
     border-radius: 8px;
