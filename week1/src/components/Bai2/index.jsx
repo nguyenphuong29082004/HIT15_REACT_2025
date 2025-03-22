@@ -5,24 +5,28 @@ import "./style.css"
 
 const TableData = () => {
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Body</th>
-                </tr>
-            </thead>
-            <tbody>
-                {data.map((item, key) => (
-                    <tr key={key}>
-                        <td>{item.id}</td>
-                        <td>{item.title}</td>
-                        <td>{item.body}</td>
+        <>
+        <div className="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Body</th>
                     </tr>
-                ))}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {data.map((item, key) => (
+                        <tr key={key}>
+                            <td>{item.id}</td>
+                            <td>{item.title}</td>
+                            <td>{item.body}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+        </>
     );
 };
 
