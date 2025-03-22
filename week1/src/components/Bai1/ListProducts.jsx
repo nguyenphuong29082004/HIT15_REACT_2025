@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { FaBox } from "react-icons/fa";
 import "./style.css"
+import "../../responsive.css"
+
 function ListProducts({onAddToCart}) {
   const products = [
     {

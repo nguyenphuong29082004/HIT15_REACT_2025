@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { FaShoppingBag } from "react-icons/fa";
 import "./style.css"
+import "../../responsive.css"
 
 
 const Cart = ({ cart, onIncrease, onDecrease}) => {

@@ -1,6 +1,7 @@
 table {
-  width: 98%;
+  /* width: 98%; */
   border-collapse: collapse;
+  margin-right: 8px;
 }
 table th {
   background-color: #019879;
@@ -17,12 +18,12 @@ th {
 }
 
 table td {
-  text-align: left; /* Căn trái nội dung */
+  text-align: left;
 }
 
 table tbody tr:last-child {
-  border-bottom: 4px solid #019879; /* Ví dụ: Thêm đường viền trên */
-  background-color: #f9f9f9; /* Ví dụ: Thay đổi màu nền */
+  border-bottom: 4px solid #019879;
+  background-color: #f9f9f9;
 }
 table tbody tr:hover {
   color: #019879;
