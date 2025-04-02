@@ -1,0 +1,7 @@
+// dinh nghia nhom scss de táitái su dung o nhieu noi
+@mixin flex($js,$al){
+    display: flex;
+    justify-content: $js;
+    align-items: $al;
+    // flex-direction: $fd;
+} 

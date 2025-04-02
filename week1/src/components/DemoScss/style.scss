@@ -1,0 +1,48 @@
+@use '../../styles/index' as style;
+.main-container{
+    @include style.flex(center, center);
+    height: 100vh;
+    .test-container {
+            @include style.flex(center, center);
+            background-color: aqua;
+            width: 350px;
+            padding: 30px;
+            line-height: 40px;
+            border-radius: 32px;
+            flex-direction: column;
+            box-shadow: 2px 4px 8px rgb(184, 174, 174);
+            &__name {
+                color: blue;
+            }
+    
+            &__title {
+                color: style.$primary-color;
+            }
+    
+            &__button {
+                padding: 10px 20px;
+                border-radius: 8px;
+                font-size: 16px;
+    
+                &--follow {
+                    background-color: blue;
+                    color: white;
+                &:hover {
+                    cursor: pointer;
+                    }
+                }
+    
+                &--message {
+                    background-color: rgb(50, 242, 107);
+                    color: white;
+                    margin-left: 12px;
+                &:hover {
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+    
+        }
+}
+// style component

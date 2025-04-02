@@ -7,10 +7,12 @@ const [something, setSomething] = useState(initialValue);
 -- setSomething: Hàm dùng để cập nhật giá trị trạng thái
 -- Khi gọi useState(initialValue) nó khởi tạo trạng thái với giá trị initialValue
 
+-- Dung de thay doi trang thai du luu
+
 PROPS
 
 1. Hiểu cách truyền props
-
+### la mot object 
 ### Khi truyền props bằng cú pháp props={item}, bạn sẽ cần truy cập thuộc tính thông qua props.props trong component con. Nếu muốn tránh việc lồng nhau và làm code gọn gàng hơn, hãy sử dụng cú pháp spread operator (...item).
 
 ### Sử dụng cú pháp ...item giúp bạn truyền trực tiếp từng thuộc tính của đối tượng vào component, điều này làm code rõ ràng và dễ hiểu hơn. Trong component con Bai1, bạn có thể trực tiếp sử dụng props.name và props.price.
@@ -26,3 +28,9 @@ PROPS
   {/* {products.map((item,key) => (
         <ListProducts key={key} {...item}/>
       ))} */}
+
+
+
+-----------------------------------
+### BEM
+### 
