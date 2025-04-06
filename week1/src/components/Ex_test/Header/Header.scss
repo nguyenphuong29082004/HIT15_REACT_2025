@@ -158,13 +158,13 @@
 //=================MENU PHONE==================
 .container-header-phone {
   padding: 20px 40px 20px 40px;
+  position: fixed;
   &--light {
     background-color: #f9f9f9;
   }
   &--dark {
     background-color: black;
   }
-  position: fixed;
 }
 .menu-phone {
   display: flex;
