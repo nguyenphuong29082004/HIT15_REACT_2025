@@ -8,7 +8,7 @@ import Service from "./components/Ex_test/Service/Service";
 import Footer from "./components/Ex_test/Footer/Footer";
 import { CiLight } from "react-icons/ci";
 import { CiDark } from "react-icons/ci";
-import "./components/Ex_test/responsive.scss";
+import "./Responsive.scss"
 function App() {  
   const [isOn, setIsOn] = useState(true);
     const handleEvent = () => {
