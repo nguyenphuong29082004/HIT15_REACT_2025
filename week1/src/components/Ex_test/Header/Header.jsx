@@ -17,10 +17,10 @@ function Header({setAdd, children}) {
                 <li className="menu__item"><a className={`menu__link ${setAdd ? "menu__link--light" : 'menu__link--dark'}`} href="#">Protfolio</a></li>
                 <li className="menu__item"><a className={`menu__link ${setAdd ? "menu__link--light" : 'menu__link--dark'}`} href="#">Team</a></li>
                 <li className="menu__item menu__item--drop"><a className={`menu__link ${setAdd ? "menu__link--light" : 'menu__link--dark'}`} href="#">Dropdown</a>
-                     <ul className="menu__sub-menu">
+                     <ul className={`menu__sub-menu ${setAdd ? "menu__sub-menu--light" : 'menu__sub-menu--dark'}`}>
                         <li><a href="">Dropdown 1</a></li>
                         <li className="menu__main-second"><a href="">Deep Dropdown</a>
-                            <ul className="menu__sub-menu-second">
+                            <ul className={`menu__sub-menu-second ${setAdd ? "menu__sub-menu-second--light" : 'menu__sub-menu-second--dark'}`}>
                                 <li><a href="">Deep Dropdown 1</a></li>
                                 <li><a href="">Deep Dropdown 2</a></li>
                                 <li><a href="">Deep Dropdown 3</a></li>
