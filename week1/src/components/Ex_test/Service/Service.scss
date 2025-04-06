@@ -1,0 +1,102 @@
+@use "../../../styles/index" as style;
+.service{
+    padding: 100px 100px 112px 100px;
+    @include style.flex(center, center);
+    flex-direction: column;
+    gap: 60px;
+    &--light{
+        background-color: style.$surface-color;
+    }
+    &--dark{
+        background-color: color-mix(in srgb, #b7b2b2, transparent 80%);;
+    }
+    &__title {
+            font-size: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: -50px;
+            // width: 100%;
+            text-align: center;
+            color: style.$nav-color;
+            // padding-bottom: 0;
+            position: relative;
+            z-index: 2;
+            &--light {
+                color: style.$nav-color;
+                    &::after {
+                        color: color-mix(in srgb, #000000, transparent 95%);
+                    }
+                }
+            &--dark {
+                    color: style.$nav-color-dark;
+                    &::after {
+                        color: color-mix(in srgb, #ffffff, transparent 95%);
+                    }
+                }
+            &::after {
+                content: "Services";
+                // white-space: nowrap;
+                position: absolute;
+                opacity: 1;
+                bottom: 20px;
+                left: -30%;
+                z-index: 1;
+                font-weight: 700;
+                font-size: 52px;
+                text-transform: uppercase;
+                line-height: 1;
+            }
+        }
+    &__description{
+        &--dark {
+                color: style.$default-color-dark;
+            }
+    }
+    &__icon-wrapper{
+        margin: 0 auto;
+        width: 64px;
+        height: 64px;
+        background: style.$accent-color;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    &__icon{
+        color: white;
+        font-size: 28px;
+    }
+    &__sub-title{
+        font-weight: 700;
+        font-size: 22px;
+        color: style.$nav-color;
+    }
+    &__sub-description{
+        line-height: 24px;
+        font-size: 14px;
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 28px;
+        column-gap: 28px;
+    }
+    &__content{
+        text-align: center;
+        padding: 80px 20px;
+        height: 100%;
+        transition: border ease-in-out 0.3s;
+        &:hover{
+            border: 1px solid style.$accent-color;
+        }
+        &--light{
+            background-color: white;
+            border: 1px solid color-mix(in srgb, #444444, transparent 85%);
+        }
+        &--dark {
+            background-color: style.$surface-color-dark;
+            border: 1px solid color-mix(in srgb, #444444, transparent 100%);
+        }
+    }
+}

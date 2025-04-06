@@ -1,19 +1,44 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-
-import Header from './components/Header/Header';
-import ContentSession from "./components/ContentSession/ContentSession"
-import AboutUs from "./components/AboutUs/AboutUs"
-import Footer from "./components/Footer/Footer"
-import "./components/responsive.css"
-function App() {
+import React, { useState } from "react";
+import "./App.css";
+import Demo_scss from './components/DemoScss';
+import Header from "./components/Ex_test/Header/Header";
+import IndexCs from "./components/Ex_test/ContentSession/IndexCs";
+import About from "./components/Ex_test/About/About";
+import Service from "./components/Ex_test/Service/Service";
+import Footer from "./components/Ex_test/Footer/Footer";
+import { CiLight } from "react-icons/ci";
+import { CiDark } from "react-icons/ci";
+import "./components/Ex_test/responsive.scss"
+function App() {  
+  const [isOn, setIsOn] = useState(true);
+    const handleEvent = () => {
+        setIsOn(!isOn)
+    }
+    console.log(isOn);
+    
   return (
     <>
-      <Header></Header>
-      <ContentSession></ContentSession>
-      <AboutUs></AboutUs>
-      <Footer></Footer>
+      {/* <Demo_scss/> */}
+      <div className={`${isOn ? "bgCl--light" : "bgCl--dark"}`}>
+            <Header setAdd={isOn}>
+            {isOn ? (
+
+              <button className="menu__btn-light" onClick={handleEvent}>
+                <CiLight className="menu__convert-light"/>
+              </button>
+            ): (
+              <button className="menu__btn-dark" onClick={handleEvent}> 
+                <CiDark className="menu__convert-dark"/>
+              </button>
+
+            )}
+            </Header >
+            <IndexCs setAdd={isOn}/>
+            <About setAdd={isOn}/>
+            <Service setAdd={isOn}/>
+            <Footer setAdd={isOn}/>
+      </div>
+      
     </>
   );
 }
