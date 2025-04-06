@@ -6,7 +6,7 @@ function Header({setAdd, children}) {
     
   return (
     <>
-     <div className={`container-header ${setAdd ? "light" : 'dark'} `}>
+        <div className={`container-header ${setAdd ? "light" : 'dark'} `}>
         {/*=====================MENU > 575============= */}
         <div className={`menu ${setAdd ? "menu-light" : 'menu-dark'}`}>
             <p class={`menu__name ${setAdd ? "menu__name--light" : 'menu__name--dark'}`}>eNno</p>
@@ -39,10 +39,42 @@ function Header({setAdd, children}) {
                 </li>
             </ul>
         </div>
+        </div>
         {/* ===========END=========== */}
 
-        <Banner setDark={setAdd}/>
+
+         {/* ================MENU PHONE=========================== */}
+        <div className={`container-header-phone ${setAdd ? "container-header-phone--light" : 'container-header-phone--dark'} `}>
+        <div className={`menu-phone ${setAdd ? "menu-phone__light" : 'menu-phone__dark'}`}>
+            <p class={`menu-phone__name-phone ${setAdd ? "menu-phone__name--light" : 'menu-phone__name--dark'}`}>eNno</p>
+            <div className={`menu-phone__right ${setAdd ? "menu-phone__right--light" : 'menu-phone__right--dark'}`}>
+                <div className={`menu-phone__item-phone menu-phone__item-phone--toggle ${setAdd ? "light" : "dark"}`}>
+                    {children}
+                </div>
+                <div className='menu_ht'>
+                    <input type="checkbox" id="toggle" />
+                    <div className="menu-phone__span">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="overlay"></div>
+                    <ul className={`menu-phone__main-phone ${setAdd ? "menu-phone__main-phone--light" : 'menu-phone__main-phone--dark'}`}>
+                        <li className="menu-phone__item-phone"><a className={`menu-phone__link-phone ${setAdd ? "menu-phone__link--light" : 'menu-phone__link--dark'}`} href="#">Home</a></li>
+                        <li className="menu-phone__item-phone"><a className={`menu-phone__link-phone ${setAdd ? "menu-phone__link--light" : 'menu-phone__link--dark'}`} href="#">About</a></li>
+                        <li className="menu-phone__item-phone"><a className={`menu-phone__link-phone ${setAdd ? "menu-phone__link--light" : 'menu-phone__link--dark'}`} href="#">Services</a></li>
+                        <li className="menu-phone__item-phone"><a className={`menu-phone__link-phone ${setAdd ? "menu-phone__link--light" : 'menu-phone__link--dark'}`} href="#">Protfolio</a></li>
+                        <li className="menu-phone__item-phone"><a className={`menu-phone__link-phone ${setAdd ? "menu-phone__link--light" : 'menu-phone__link--dark'}`} href="#">Team</a></li>
+                        <li className="menu-phone__item-phone"><a className={`menu-phone__link-phone ${setAdd ? "menu-phone__link--light" : 'menu-phone__link--dark'}`} href="#">Dropdown</a></li>
+                        <li className="menu-phone__item-phone"><a className={`menu-phone__link-phone ${setAdd ? "menu-phone__link--light" : 'menu-phone__link--dark'}`} href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
         </div>
+        </div>
+        <Banner setDark={setAdd}/>
     </>
   )
 }

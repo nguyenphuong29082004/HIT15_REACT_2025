@@ -1,4 +1,7 @@
 @use "../../../styles/index" as style;
+.container-header-phone {
+  display: none;
+}
 .menu {
   display: flex;
   align-items: center;
@@ -11,10 +14,10 @@
   &__name {
     font-size: 30px;
     font-weight: 700;
-    &--light{
+    &--light {
       color: style.$nav-color;
     }
-    &--dark{
+    &--dark {
       color: style.$nav-color-dark;
     }
   }
@@ -40,10 +43,10 @@
     font-weight: 500;
     line-height: 30px;
     width: fit-content;
-    &--light{
+    &--light {
       color: style.$nav-color;
     }
-    &--dark{
+    &--dark {
       color: style.$nav-color-dark;
     }
   }
@@ -91,7 +94,7 @@
       list-style: none;
       width: 80px;
       border-radius: 20px;
-     
+
       transition: transform 0.5s ease;
       &.light {
         background-color: style.$accent-color; // Đảm bảo biến được nhập
@@ -108,7 +111,6 @@
     @include style.flex(center, center);
   }
   &__convert-light {
-    
     font-size: 30px;
     padding: 4px;
   }
@@ -121,14 +123,175 @@
   &__convert-dark {
     font-size: 30px;
     padding: 4px;
-    
   }
-
 }
 
-.menu-light{
+.menu-light {
   background-color: white;
 }
-.menu-dark{
+.menu-dark {
   background-color: black;
+}
+
+//=================MENU PHONE==================
+.container-header-phone {
+  padding: 20px 40px 20px 40px;
+  &--light {
+    background-color: #f9f9f9;
+  }
+  &--dark {
+    background-color: black;
+  }
+  position: fixed;
+}
+.menu-phone {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  &__name-phone {
+    font-size: 30px;
+    font-weight: 700;
+
+    &--light {
+      color: style.$nav-color;
+    }
+
+    &--dark {
+      color: style.$nav-color-dark;
+    }
+  }
+  &__span {
+    position: relative;
+  }
+  &__right {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+    .menu_ht {
+      position: relative;
+      margin-top: 6px;
+    }
+    span {
+      display: flex;
+      width: 29px;
+      height: 2px;
+      margin-bottom: 5px;
+
+      border-radius: 3px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    input {
+      position: absolute;
+      width: 40px;
+      height: 30px;
+      // top: 12px;
+      // right: 136px;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(58, 57, 57, 0.559);
+      z-index: 1;
+      display: none;
+    }
+    &--light {
+      span {
+        background: #020202;
+      }
+    }
+    &--dark {
+      span {
+        background-color: white;
+      }
+    }
+  }
+  &__item-phone {
+    list-style-type: none;
+
+    :hover {
+      color: style.$accent-color;
+    }
+  }
+  &__item-phone {
+    padding: 4px;
+
+    &--toggle {
+      list-style: none;
+      width: 80px;
+      border-radius: 20px;
+
+      transition: transform 0.5s ease;
+
+      &.light {
+        background-color: style.$accent-color; // Đảm bảo biến được nhập
+      }
+
+      &.dark {
+        background-color: #cc1111; // Màu tối mặc định
+      }
+    }
+  }
+  &__link-phone {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 30px;
+    width: fit-content;
+
+    &--light {
+      color: style.$nav-color;
+    }
+
+    &--dark {
+      color: style.$nav-color-dark;
+    }
+  }
+  &__main-phone {
+    width: 700px;
+    height: max-content;
+    display: none;
+    border-radius: 24px;
+    position: absolute;
+    left: 40px;
+    line-height: 60px;
+    margin-top: 24px;
+    padding: 12px 24px 12px;
+    transform: translateX(80px);
+    transition: transform 0.8s ease, opacity 0.5s ease;
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    &--light {
+      background-color: #f9f9f9;
+    }
+    &--dark {
+      background-color: #3e3c3c;
+      a {
+        color: #f9f9f9;
+      }
+    }
+  }
+}
+input:checked + .menu-phone__span span:nth-child(1) {
+  opacity: 0;
+}
+
+input:checked + .menu-phone__span span:nth-child(2) {
+  transform: rotate(-45deg) translate(-2px, 6px);
+}
+
+input:checked + .menu-phone__span span:nth-child(3) {
+  transform: rotate(45deg) translate(1px, -2px);
+}
+input:checked ~ .overlay {
+  display: block;
+}
+input:checked ~ .menu-phone__main-phone {
+  display: block;
+  transform: translateX(-700px);
 }

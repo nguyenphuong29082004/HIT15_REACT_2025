@@ -1,4 +1,7 @@
 @media (max-width: 1024px) {
+  .container-header-phone {
+    display: none;
+  }
   .menu {
     gap: 108px;
     padding: 20px 40px 32px 40px;
@@ -63,7 +66,16 @@
   }
 }
 
+// ============MENU PHONE=====================
 @media (max-width: 992px) {
+  .container-header {
+    display: none;
+  }
+  .container-header-phone {
+    display: block;
+    width: 100%;
+  }
+
   .banner {
     flex-direction: column-reverse;
     row-gap: 32px;
@@ -110,10 +122,11 @@
     /* Để phần này chiếm toàn bộ chiều rộng */
   }
 }
-@media (max-width: 767px){
-  .about__data{
+
+@media (max-width: 767px) {
+  .about__data {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 12px;
   }
 }
@@ -143,10 +156,17 @@
   .about__number {
     font-size: 28px;
   }
-            .service {
-              padding: 80px 20px 80px 20px;
-            }
+  .service {
+    padding: 80px 20px 80px 20px;
+  }
   .service__grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .menu-phone__main-phone {
+    width: 300px;
+  }
+  input:checked ~ .menu-phone__main-phone {
+    display: block;
+    transform: translateX(-300px);
   }
 }
