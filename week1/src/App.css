@@ -1,13 +1,11 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 4px;
-}
-h1{
-    margin: 12px 4px 12px 0px;
-}
-.icon-cart{
-    color: #a09793;
+    /* margin-left: 4px; */
+/* padding: 40px; */
+
+.bgCl--dark {
+  background-color: black;
 }

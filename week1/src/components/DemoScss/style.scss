@@ -1,48 +1,92 @@
-@use '../../styles/index' as style;
-.main-container{
-    @include style.flex(center, center);
-    height: 100vh;
-    .test-container {
-            @include style.flex(center, center);
-            background-color: aqua;
-            width: 350px;
-            padding: 30px;
-            line-height: 40px;
-            border-radius: 32px;
-            flex-direction: column;
-            box-shadow: 2px 4px 8px rgb(184, 174, 174);
-            &__name {
-                color: blue;
-            }
+// @use '../../styles/index' as style;
+// .main-container{
+//     @include style.flex(center, center);
+//     height: 100vh;
+//     .test-container {
+//             @include style.flex(center, center);
+//             background-color: aqua;
+//             width: 350px;
+//             padding: 30px;
+//             line-height: 40px;
+//             border-radius: 32px;
+//             flex-direction: column;
+//             box-shadow: 2px 4px 8px rgb(184, 174, 174);
+//             &__name {
+//                 color: blue;
+//             }
     
-            &__title {
-                color: style.$primary-color;
-            }
+//             &__title {
+//                 color: style.$primary-color;
+//             }
     
-            &__button {
-                padding: 10px 20px;
-                border-radius: 8px;
-                font-size: 16px;
+//             &__button {
+//                 padding: 10px 20px;
+//                 border-radius: 8px;
+//                 font-size: 16px;
     
-                &--follow {
-                    background-color: blue;
-                    color: white;
-                &:hover {
-                    cursor: pointer;
-                    }
-                }
+//                 &--follow {
+//                     background-color: blue;
+//                     color: white;
+//                 &:hover {
+//                     cursor: pointer;
+//                     }
+//                 }
     
-                &--message {
-                    background-color: rgb(50, 242, 107);
-                    color: white;
-                    margin-left: 12px;
-                &:hover {
-                        cursor: pointer;
-                    }
-                }
+//                 &--message {
+//                     background-color: rgb(50, 242, 107);
+//                     color: white;
+//                     margin-left: 12px;
+//                 &:hover {
+//                         cursor: pointer;
+//                     }
+//                 }
                 
-            }
+//             }
     
-        }
+//         }
+// }
+// // style component
+
+.container-toggle {
+    background-color: #01beff;
+    padding: 8px 12px 8px 12px;
+    width: max-content;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    /* transition: transform 0.3s ease-in-out; */
 }
-// style component
+
+/* .container-toggle.on {
+  flex-direction: row-reverse;
+  transition: transform 0.3s ease-in-out;
+} */
+.text {
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    width: 50px;
+}
+
+.btn-toggle {
+    background-color: #01beff;
+    width: 20px;
+    height: 20px;
+    border: 24px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    /* Hiệu ứng mượt mà khi di chuyển */
+    position: relative;
+}
+
+.container-toggle.on .text {
+    transform: translateX(100px);
+}
+
+.container-toggle.on .btn-toggle {
+    transform: translateX(-100px);
+}
