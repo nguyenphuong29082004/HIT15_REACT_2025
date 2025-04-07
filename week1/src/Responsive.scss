@@ -129,6 +129,10 @@
     grid-template-columns: repeat(2, 1fr);
     row-gap: 12px;
   }
+  .menu-phone__main-phone {
+    width: 564px;
+    left: 142px;
+  }
 }
 @media (max-width: 575px) {
   .banner {
