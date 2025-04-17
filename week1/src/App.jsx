@@ -1,44 +1,30 @@
 import React, { useState } from "react";
 import "./App.css";
-import Demo_scss from './components/DemoScss';
-import Header from "./components/Ex_test/Header/Header";
-import IndexCs from "./components/Ex_test/ContentSession/IndexCs";
-import About from "./components/Ex_test/About/About";
-import Service from "./components/Ex_test/Service/Service";
-import Footer from "./components/Ex_test/Footer/Footer";
-import { CiLight } from "react-icons/ci";
-import { CiDark } from "react-icons/ci";
+
 import "./Responsive.scss"
+import Port2 from "./components/Port2/Port2";
+import Countdown from "./components/Countdown/Countdown";
+import Prop_demo from "./components/Prop_demo/Prop_demo";
+import Order from "./components/order/order";
 function App() {  
   const [isOn, setIsOn] = useState(true);
     const handleEvent = () => {
         setIsOn(!isOn)
     }
     console.log(isOn);
-    
+  const [display, setDisplay] = useState(false);
   return (
     <>
-      {/* <Demo_scss/> */}
-      <div className={`${isOn ? "bgCl--light" : "bgCl--dark"}`}>
-            <Header setAdd={isOn}>
-            {isOn ? (
+      {/* <Port2/> */}
+      <button onClick={() => setDisplay(!display) }> Toggle</button>
+      {/* {display && <Port2/>} */}
+      {/* {display && <Countdown/>} */}
 
-              <button className="menu__btn-light" onClick={handleEvent}>
-                <CiLight className="menu__convert-light"/>
-              </button>
-            ): (
-              <button className="menu__btn-dark" onClick={handleEvent}> 
-                <CiDark className="menu__convert-dark"/>
-              </button>
+      <p>========================</p>
+      <Prop_demo/>
+      {/* <Countdown/> */}
 
-            )}
-            </Header >
-            <IndexCs setAdd={isOn}/>
-            <About setAdd={isOn}/>
-            <Service setAdd={isOn}/>
-            <Footer setAdd={isOn}/>
-      </div>
-      
+      <Order/>
     </>
   );
 }

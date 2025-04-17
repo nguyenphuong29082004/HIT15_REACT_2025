@@ -1,36 +1,27 @@
-<!--  PHAN useState-->
+## Luôn được gọi sau khi component được mouse
 
-const [something, setSomething] = useState(initialValue);
--- Đây là cú pháp Destructuring trong Js. Là một Hook cơ bản trong React. Nó được dùng để khai báo và quản lý trạng thái trong một thành phần (component) chức năng.
--- useState trả về một mảng gồm hai phần tử
--- something: Biến trạng thái hiện tại. Nó lưu trữ giá trị trạng thái
--- setSomething: Hàm dùng để cập nhật giá trị trạng thái
--- Khi gọi useState(initialValue) nó khởi tạo trạng thái với giá trị initialValue
+## xử lý site effect (gọi api, ....)
 
--- Dung de thay doi trang thai du luu
+### 1. moi lan deu re render lai
 
-PROPS
+### 2. Goi sau rkhi them vao dom, goi lai moi khi components re render.
 
-1. Hiểu cách truyền props
-### la mot object 
-### Khi truyền props bằng cú pháp props={item}, bạn sẽ cần truy cập thuộc tính thông qua props.props trong component con. Nếu muốn tránh việc lồng nhau và làm code gọn gàng hơn, hãy sử dụng cú pháp spread operator (...item).
+useEffect(() => {
+const fetchPost = async () =>{
+try{
+const response = await axios.get(
+`https://jsonplaceholder.typicode.com/posts`
+);
+setPost(response.data);
+}catch(error){
+console.error("Loi khi fetch du lieu", error);
+}
+};
+fetchPost();
+},[]);
 
-### Sử dụng cú pháp ...item giúp bạn truyền trực tiếp từng thuộc tính của đối tượng vào component, điều này làm code rõ ràng và dễ hiểu hơn. Trong component con Bai1, bạn có thể trực tiếp sử dụng props.name và props.price.
+### phan [] Goi mot lan khi component duoc mousre (no duoc them vao DOM)
 
-### Nếu quyết định sử dụng props={item}, hãy nhớ rằng các thuộc tính sẽ được đóng gói bên trong props.props. Ví dụ: props.props.name
+### dung để:
 
-### Đối với mảng:
-
-{products.map((item, key) => (
-<Bai1 key={key} name={item[0]} price={item[1]} />
-))}
-
-  {/* {products.map((item,key) => (
-        <ListProducts key={key} {...item}/>
-      ))} */}
-
-
-
------------------------------------
-### BEM
-### 
+## memo su dung prop ......................................
