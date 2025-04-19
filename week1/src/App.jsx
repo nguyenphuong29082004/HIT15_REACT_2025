@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import "./App.css";
-import Home from "./components/ex_week5/Home";
+
+// import Weather from "./components/ex_week5/Weather";
+import Data from "./components/ex_week5/Data";
 
 
 
 function App() {  
   return(
     <>
-    <Home/>
+    {/* <Home/> */}
+    {/* <Port2></Port2> */}
+    {/* <Weather/> */}
+    <Data/>
     </>
   )
   
