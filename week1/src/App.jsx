@@ -1,21 +1,21 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React, { useState } from "react";
+import "./App.css";
 
-import Header from './components/Header/Header';
-import ContentSession from "./components/ContentSession/ContentSession"
-import AboutUs from "./components/AboutUs/AboutUs"
-import Footer from "./components/Footer/Footer"
-import "./components/responsive.css"
-function App() {
-  return (
+// import Weather from "./components/ex_week5/Weather";
+import Data from "./components/ex_week5/Data";
+
+
+
+function App() {  
+  return(
     <>
-      <Header></Header>
-      <ContentSession></ContentSession>
-      <AboutUs></AboutUs>
-      <Footer></Footer>
+    {/* <Home/> */}
+    {/* <Port2></Port2> */}
+    {/* <Weather/> */}
+    <Data/>
     </>
-  );
+  )
+  
 }
 
 export default App;

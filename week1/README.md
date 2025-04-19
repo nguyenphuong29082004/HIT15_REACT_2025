@@ -1,12 +1,27 @@
-# React + Vite
+## Luôn được gọi sau khi component được mouse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## xử lý site effect (gọi api, ....)
 
-Currently, two official plugins are available:
+### 1. moi lan deu re render lai
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 2. Goi sau rkhi them vao dom, goi lai moi khi components re render.
 
-## Expanding the ESLint configuration
+useEffect(() => {
+const fetchPost = async () =>{
+try{
+const response = await axios.get(
+`https://jsonplaceholder.typicode.com/posts`
+);
+setPost(response.data);
+}catch(error){
+console.error("Loi khi fetch du lieu", error);
+}
+};
+fetchPost();
+},[]);
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### phan [] Goi mot lan khi component duoc mousre (no duoc them vao DOM)
+
+### dung để:
+
+## memo su dung prop ......................................
