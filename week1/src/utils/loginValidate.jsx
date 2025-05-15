@@ -20,4 +20,5 @@ export const loginValidate = () => Yup.object({
 
     checkbox: Yup.boolean()
     .oneOf([true], "Phai dong y dieu khoan"),
+      
 }) 

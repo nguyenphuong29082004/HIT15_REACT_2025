@@ -110,8 +110,6 @@ const SignupForm = () => {
                 <ErrorMessage name="checkbox" component="span" style={{ color: 'red' }}/>
             </div>
             <button type="submit">Submit</button>
-            
-
         </Form>
 
     </Formik>
