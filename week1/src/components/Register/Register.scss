@@ -1,0 +1,31 @@
+@use "../../styles/index" as style;
+
+.register {
+    height: 52vh;
+    background: url(../../assets/bg-masthead-BwreFw1Q.jpg) no-repeat;
+    background-size: auto;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: style.$default-color;
+        opacity: .5;
+    }
+
+    &__h1 {
+        color: white;
+        z-index: 999;
+    }
+}

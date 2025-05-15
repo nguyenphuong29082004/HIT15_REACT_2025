@@ -1,0 +1,32 @@
+@use "../../styles/index" as style;
+
+.banner {
+  height: 84vh;
+  background: url(../../assets/bg-masthead-BwreFw1Q.jpg) no-repeat;
+  background-size: auto;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::after{ 
+    content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: style.$default-color;
+      opacity: .5;
+  }
+}
+.banner h1 {
+  font-size: 3rem;
+  color: #fff;
+  position: relative;
+  z-index: 8;
+  width: 72%;
+  margin: 0 auto;
+  line-height: 1.5;
+}

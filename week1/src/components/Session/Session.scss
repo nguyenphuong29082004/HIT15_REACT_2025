@@ -1,0 +1,35 @@
+@use "../../styles/index" as style;
+
+.session {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 120px;
+  gap: 100px;
+  background-color: #f8f9fa;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__icon {
+      font-size: 55px;
+      color: style.$primary-color;
+    }
+    &__title{
+        font-size: 25px;
+        font-weight: 600;
+        margin: .75rem 0;
+        color: style.$nav-color;
+    }
+    &__des {
+      font-size: 20px;
+      font-weight: 100;
+      color: style.$accent-color;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+        Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+      text-align: center;
+      line-height: 32px;
+    }
+  }
+}
