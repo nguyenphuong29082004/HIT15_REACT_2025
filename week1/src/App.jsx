@@ -7,20 +7,20 @@ import Describe from "./components/Describe/Describe";
 import Review from "./components/Review/Review";
 import Footer from "./components/Footer/Footer";
 import Register from "./components/Register/Register";
-import Login from "./components/Login/Login";
-import Register2 from "./components/Register2/Register2";
+import {useRoutes} from "react-router-dom";
+import routes from "./components/Router/Router";
 function App() {  
+  const routing = useRoutes(routes);
   return (
     <div className="main">
-    {/* <Header/>
+    {/* <Header />
     <Banner/>
     <Session/>
     <Describe/>
     <Review/>
     <Register/>
     <Footer/> */}
-    <Login/>
-    {/* <Register2/> */}
+    {routing}
     </div>
   );
 }

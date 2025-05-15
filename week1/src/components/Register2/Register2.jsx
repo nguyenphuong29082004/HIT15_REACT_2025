@@ -2,6 +2,7 @@ import React from "react";
 import "./Register2.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { loginValidate } from "../../utils/loginValidate";
+import { Link } from "react-router-dom";
 function Register2() {
   return (
     <div className="container-register2">
@@ -35,13 +36,18 @@ function Register2() {
           </Form>
         </Formik>
         <p>
-          Don't have an account? <span>Login</span>
+          Don't have an account?{" "}
+          <span>
+            <Link to="/login">Login</Link>
+          </span>
         </p>
         <div className="wrapper">
-          <div className="close">
-            <span></span>
-            <span></span>
-          </div>
+          <Link to="/">
+            <div className="close">
+              <span></span>
+              <span></span>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
