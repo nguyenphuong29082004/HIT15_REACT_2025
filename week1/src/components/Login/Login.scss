@@ -16,7 +16,10 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  input {
+  Form{
+    width: 100%;
+  }
+  .input-field {
     border: none;
     outline: none;
     background-color: #f2f2f2;
@@ -37,36 +40,40 @@
   span {
     font-weight: 400;
   }
+  .error {
+    color: red;
+    font-size: 14px;
+  }
 }
-.wrapper{
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    .close {
+
+.wrapper {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  .close {
     background-color: black;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     span {
-        background-color: rgb(254, 254, 254);
-        display: block;
-        height: 2px;
-        width: 24px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform-origin: center;
+      background-color: rgb(254, 254, 254);
+      display: block;
+      height: 2px;
+      width: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: center;
     }
     span:first-child {
-        transform: translate(-50%, -50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
     }
     span:last-child {
-        transform: translate(-50%, -50%) rotate(-45deg);
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
+  }
 }
-}
-

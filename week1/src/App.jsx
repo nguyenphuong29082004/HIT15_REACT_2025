@@ -12,14 +12,14 @@ import Register2 from "./components/Register2/Register2";
 function App() {  
   return (
     <div className="main">
-    <Header/>
+    {/* <Header/>
     <Banner/>
     <Session/>
     <Describe/>
     <Review/>
     <Register/>
-    <Footer/>
-    {/* <Login/> */}
+    <Footer/> */}
+    <Login/>
     {/* <Register2/> */}
     </div>
   );

@@ -1,81 +1,101 @@
 .container-register2 {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .register2 {
-    width: 28%;
-    padding: 2rem 3rem;
-    background-color: #fff;
-    box-shadow: 0 0 12px #0000001a;
-    border-radius: 0.2rem;
-    position: relative;
+  width: 28%;
+  padding: 2rem 3rem;
+  background-color: #fff;
+  box-shadow: 0 0 12px #0000001a;
+  border-radius: 0.2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  Form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+  }
+  .input-group {
+    width: 100%;
+  }
 
-    input {
-        border: none;
-        outline: none;
-        background-color: #f2f2f2;
-        padding: 16px;
-        width: 100%;
-        margin: 12px 0px;
-    }
+  input {
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+    padding: 16px;
+    width: 100%;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+  }
 
-    button {
-        width: 100%;
-    }
+  .error {
+    color: red;
+    font-size: 13px;
+    min-height: 18px;
+    margin-bottom: 12px;
+    display: block;
+  }
 
-    p {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-        font-weight: 100;
-        color: #656769;
-        margin-bottom: 24px;
-    }
+  button {
+    width: 100%;
+  }
 
-    span {
-        font-weight: 400;
-    }
+  p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    font-weight: 100;
+    color: #656769;
+    margin-bottom: 24px;
+  }
+
+  span {
+    font-weight: 400;
+  }
 }
 
 .wrapper {
-    position: absolute;
-    top: -12px;
-    right: -12px;
+  position: absolute;
+  top: -12px;
+  right: -12px;
 
-    .close {
-        background-color: black;
-        width: 50px;
-        height: 50px;
-        border-radius: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
+  .close {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-        span {
-            background-color: rgb(254, 254, 254);
-            display: block;
-            height: 2px;
-            width: 24px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform-origin: center;
-        }
-
-        span:first-child {
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        span:last-child {
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
+    span {
+      background-color: rgb(254, 254, 254);
+      display: block;
+      height: 2px;
+      width: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: center;
     }
+
+    span:first-child {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    span:last-child {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
 }
