@@ -22,15 +22,19 @@ function Login() {
           }}
         >
           <Form>
-            <Field name="email" placeholder="Email" className="input-field" />
-            <ErrorMessage name="email" component="div" className="error" />
+            <div className="input-field" >
+              <Field name="email" placeholder="Email" />
+              <ErrorMessage name="email" component="div" className="error" />
+            </div>
+            <div 
+              className="input-field">
             <Field
               name="password"
               type="password"
               placeholder="Password"
-              className="input-field"
             />
             <ErrorMessage name="password" component="div" className="error" />
+            </div>
             <button type="submit">Login</button>
           </Form>
         </Formik>

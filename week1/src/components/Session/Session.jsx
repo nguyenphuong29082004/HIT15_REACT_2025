@@ -8,7 +8,7 @@ function Session() {
   return (
     <div className='session'>
         <div className="session__item">
-            <div className="session__item__icon"><FaRegWindowMaximize/></div>
+            <div className="session__item__icon"><FaRegWindowMaximize className='icon2'/></div>
             <h1 className="session__item__title">Fully Responsive</h1>
             <div className="session__item__des">This theme will look great on any device, no matter the size!</div>
         </div>

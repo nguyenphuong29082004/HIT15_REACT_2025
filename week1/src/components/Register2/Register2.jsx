@@ -23,7 +23,7 @@ function Register2() {
         >
           <Form>
             <div className="input-group">
-              <Field name="email" placeholder="Email" />
+              <Field name="email" placeholder="Email" className="input-group" />
               <ErrorMessage name="email" component="div" className="error" />
             </div>
 
