@@ -9,11 +9,19 @@ import Register from "../Register/Register";
 import Footer from "../Footer/Footer";
 import Register2 from "../Register2/Register2";
 import Header from "../header/Header";
-
+import { Navigate } from "react-router-dom";
 
 const routes = [
   {
     path: "/",
+    element: <Navigate to="/login" replace />
+  },
+  {
+    path: "/login",
+    element: <Login/>
+  },
+  {
+    path: "/home",
     element: (
       <>
         <Header/>
@@ -26,10 +34,7 @@ const routes = [
       </>
     ),
   },
-  {
-    path: "/login",
-    element: <Login/>
-  },
+  
   {
     path: "/register2",
     element: <Register2/>
