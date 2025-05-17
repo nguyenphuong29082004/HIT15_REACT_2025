@@ -8,7 +8,7 @@ import Review from "../Review/Review";
 import Register from "../Register/Register";
 import Footer from "../Footer/Footer";
 import Register2 from "../Register2/Register2";
-import Header from "../header/Header";
+import Header from "../Header/Header";
 import { Navigate } from "react-router-dom";
 
 const routes = [
