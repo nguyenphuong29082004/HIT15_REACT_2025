@@ -59,7 +59,7 @@ function Login() {
             />
             <ErrorMessage name="password" component="div" className="error" />
             </div>
-            <button type="submit">Dang nhap</button>
+            <button type="submit">Login</button>
           </Form>
         </Formik>
         {/* <form action="">

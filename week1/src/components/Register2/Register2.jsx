@@ -58,7 +58,7 @@ function Register2() {
           </Form>
         </Formik>
         <p>
-          Don't have an account?{" "}
+          You have an account?{" "}
           <span>
             <Link to="/login">Login</Link>
           </span>
