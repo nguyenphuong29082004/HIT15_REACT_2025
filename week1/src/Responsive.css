@@ -15,8 +15,9 @@
   .session {
     padding: 100px 60px;
   }
-  .register {
-    height: 32vh;
+  .login,
+  .register2 {
+    width: 50%;
   }
 }
 
@@ -111,7 +112,20 @@
   .footer {
     padding: 40px 0px;
   }
-  .footer__menu a, .footer__menu p  {
+  .footer__menu a,
+  .footer__menu p {
     font-size: 12px;
-}
+  }
+  .register2,
+  .login {
+    width: 80%;
+    padding: 2rem 12px;
+    h2 {
+      font-size: 24px;
+    }
+    .wrapper .close {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
