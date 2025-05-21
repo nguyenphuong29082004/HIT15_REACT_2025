@@ -6,8 +6,8 @@ import Main_week9 from "./components/week9/Main_week9/main_week9";
 function App() {  
   return (
     <>
-      <Week7/>
-      {/* <Main_week9/> */}
+      {/* <Week7/> */}
+      <Main_week9/>
       
       
     </>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import Home from '../pages/home'
 import New from '../pages/new'
 import ProductList from '../pages/ProductList'
@@ -6,6 +6,10 @@ import Product from '../Product'
 import Contact from '../pages/contact'
 import Header from "../pages/Header"
 import { Route, Routes, Link, useRoutes} from "react-router-dom";
+import Content from '../pages/Content/Content'
+import Paragraph from '../pages/Paragraph/Paragraph'
+export const ThemeContext = React.createContext();
+
 function main_week9() {
     const elements = useRoutes([
         {
@@ -53,7 +57,14 @@ function main_week9() {
             }
           ]
         }
-      ])
+      ]);
+      
+      // const [theme, setTheme] = useState("dark");
+      // const toggleTheme = () => {
+      //   setTheme(theme === "dark" ? "light" : "dark" )
+      // }
+
+      const context = useContext()
   return (
     <>
     {/* <Login/> */}
@@ -75,6 +86,24 @@ function main_week9() {
         <Route path="/product/:productId" element={<Product/>}></Route>
       </Route>
     </Routes> */}
+      <div style={{padding: "20px"}} className='app'>
+          <button onClick={toggleTheme}>Toggle theme</button>
+          <Paragraph theme={theme}/>
+      </div>
+
+    {/* <ThemeContext.Provider value={theme}>
+      <div style={{padding: "20px"}} className='app'>
+          <button onClick={toggleTheme}>Toggle theme</button>
+          <Paragraph theme={theme}/>
+      </div>
+    </ThemeContext.Provider> */}
+
+
+
+    {/* <div style={{padding: "20px"}}>
+        <button onClick={toggleTheme}>Toggle theme</button>
+        <Content theme={theme}/>
+    </div> */}
     {elements}
     
     
