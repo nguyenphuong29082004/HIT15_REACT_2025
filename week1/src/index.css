@@ -73,4 +73,5 @@ button:focus-visible {
   margin: 0;
   box-sizing: border-box;
   color: #444444;
+  padding: 20px 120px;
 }

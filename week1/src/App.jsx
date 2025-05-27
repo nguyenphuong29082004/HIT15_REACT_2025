@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import "./App.css";
+import { useRoutes } from "react-router-dom";
+import routes from "./components/Router/router";
+import "./Responsive.scss"
+import Profile from "./components/Profile/Profile";
 
-import Week7 from "./components/week7/Main_week7/main_week7";
-import Main_week9 from "./components/week9/Main_week9/main_week9";
 function App() {  
+  const routing = useRoutes(routes)
   return (
-    <>
-      {/* <Week7/> */}
-      <Main_week9/>
-      
-      
-    </>
+    <div>
+      {routing}
+      {/* <Profile/> */}
+    </div>
   );
 }
 

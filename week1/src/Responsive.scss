@@ -1,176 +1,352 @@
-@media (max-width: 1024px) {
-  .container-header-phone {
-    display: none;
+@media (max-width: 1030px) {
+  :root {
+    padding: 20px 60px;
   }
-  .menu {
-    gap: 108px;
-    padding: 20px 40px 32px 40px;
+
+  .banner__left__title {
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
   }
-  .banner {
-    padding: 100px 80px 12px 80px;
+
+  .banner__right {
+    width: 800px;
+    height: 360px;
   }
-  .banner__title {
-    font-size: 40px;
+
+  .banner__left__paragraph {
+    margin-bottom: 40px;
+    width: 366px;
+    line-height: 2;
+    font-size: 16px;
   }
-  .banner__description {
-    line-height: 32px;
-    margin: 12px 0px 12px 0px;
+
+  .feature__above__heading {
+    margin-bottom: 20px;
   }
-  .csession {
-    margin: 100px 0px;
-    padding: 0px 40px 12px 40px;
-    column-gap: 18px;
+
+  .feature__above {
+    width: 70%;
   }
-  .csession__wrapper {
-    width: 420px;
+
+  .feature__main__img {
+    position: absolute;
+    top: 27%;
+    left: -8%;
+    width: 150px;
   }
-  .csession__sub-container {
-    width: 100%;
+
+  .feature__main__paragraph {
+    font-size: 12px;
+    width: 200px;
   }
-  .about {
-    padding: 0px 40px 12px 57px;
+
+  .feature__main__left {
+    position: absolute;
+    top: 12%;
+    left: 38%;
   }
-  .about__content {
-    column-gap: 18px;
-    justify-content: center;
-    align-items: center;
+
+  .feature__main__title {
+    margin-bottom: 8px;
   }
-  .about__right {
-    //    flex-direction: column;
-    width: 400px;
+
+  .feature__main__imgBg {
+    width: 350px;
   }
-  .about__right .about-text {
-    font-size: 20px;
+
+  .grid {
+    column-gap: 100px;
   }
-  .about__left {
-    width: 450px;
+
+  .testimonials__heading {
+    font-size: 32px;
   }
-  .service {
-    padding: 100px 40px 112px 40px;
+  .profile {
+    display: flex;
+    gap: 100px;
+    margin-left: -59px;
   }
-  .service__grid {
-    row-gap: 8px;
-    column-gap: 8px;
+  .btnAdd {
+    padding: 12px 60px;
   }
-  .footer {
-    padding: 40px 40px 40px 40px;
-  }
-  .footer__above {
-    gap: 32px;
-  }
-  .footer__left {
-    margin-right: 24px;
-  }
-  .footer__follow {
-    width: 300px;
+  .tags,
+  .inTitle {
+    width: 200px;
   }
 }
 
-// ============MENU PHONE=====================
 @media (max-width: 992px) {
-  .container-header {
-    display: none;
-  }
-  .container-header-phone {
-    display: block;
-    width: 100%;
-  }
-
   .banner {
     flex-direction: column-reverse;
-    row-gap: 32px;
   }
-  .banner__title {
-    font-size: 48px;
+
+  .banner__left__title {
+    letter-spacing: 2px;
+    text-align: center;
   }
-  .csession {
+
+  .banner__right {
+    width: 100%;
+    height: 360px;
+  }
+
+  .banner__left {
+    display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    align-items: center;
   }
-  .csession__wrapper {
+
+  .banner__left__paragraph {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 79%;
+  }
+
+  .feature {
+    margin-top: 80px;
+  }
+
+  .feature__above__heading {
+    margin-bottom: 8px;
+    font-size: 30px;
+  }
+
+  .feature__above {
+    width: 80%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .feature__main__paragraph {
+    font-size: 14px;
+    width: 300px;
+  }
+  .feature__main__imgBg {
+    width: 500px;
+    height: 280px;
+  }
+  .feature__main__img {
+    width: 200px;
+  }
+  .feature__main__left {
+    left: 35%;
+  }
+
+  .testimonials {
+    padding: 30px 40px 60px 40px;
+    margin-top: 80px;
+  }
+  .testimonials__heading {
+    font-size: 28px;
+  }
+  .testimonials__bg {
+    padding: 20px 20px;
+  }
+  .profile {
+    gap: 40px;
+  }
+  .btnAdd {
+    padding: 12px 20px;
+  }
+  .tags,
+  .inTitle {
+    width: 150px;
+  }
+  .menuProfile {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner__right {
+    height: 300px;
+  }
+  .banner__left__title {
+    font-size: 25px;
+  }
+  .banner__left__paragraph {
     width: 100%;
   }
-  .about__content {
+  .feature__above__heading {
+    font-size: 25px;
+  }
+  .feature__main__title {
+    font-size: 20px;
+  }
+  .feature__main__img {
+    width: 180px;
+  }
+  .feature__main__imgBg {
+    width: 440px;
+  }
+  .feature__main__paragraph {
+    font-size: 12px;
+    width: 240px;
+    text-align: justify;
+  }
+  .testimonials__heading {
+    font-size: 24px;
+  }
+  .testimonials__bg {
     flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
   }
-  .service__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .about__left {
-    width: 700px;
-  }
-  .about__right {
+  .testimonials__left {
     width: 100%;
-  }
-  .footer {
-    padding: 40px 40px 40px 40px;
+    text-align: center;
   }
   .footer__above {
     display: flex;
     flex-wrap: wrap;
-    /* Cho phép các phần tử xuống dòng */
   }
-  .footer__left {
-    margin-right: 120px;
+  .footer__item:nth-child(4) {
+    margin-top: 20px;
   }
-  .footer__userfuls {
-    margin-right: 20px;
+  .footer__item ul li {
+    font-size: 14px;
   }
-  .footer__follow {
-    display: block;
+  .btnProfile {
+    align-items: center;
+    gap: 20px;
+  }
+  .content {
+    padding: 20px 20px;
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .menuProfile {
     width: 100%;
-    /* Để phần này chiếm toàn bộ chiều rộng */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .btnAdd {
+    height: 40px;
+    margin-right: 80px;
+  }
+
+  .menuProfile {
+    height: auto;
   }
 }
 
-@media (max-width: 767px) {
-  .about__data {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 12px;
-  }
-  .menu-phone__main-phone {
-    width: 564px;
-    left: 142px;
-  }
-}
 @media (max-width: 575px) {
-  .banner {
-    padding: 100px 20px 12px 20px;
+  :root {
+    padding: 20px 20px;
   }
-  .banner__title {
-    font-size: 30px;
-    line-height: 40px;
+  button {
+    padding: 12px 20px;
+    font-size: 12px;
   }
-
-  .csession {
-    margin: 60px 0px;
-    padding: 0px 20px 12px 20px;
+  .banner__right {
+    height: 220px;
   }
-  .about {
-    padding: 0px 20px 12px 20px;
-  }
-  .about__data {
-    margin: 0px 0px 40px 0px;
-  }
-  .about__left {
-    width: 330px;
+  .banner__left__paragraph {
+    font-size: 14px;
   }
 
-  .about__number {
-    font-size: 28px;
+  .feature {
+    margin-top: 80px;
   }
-  .service {
-    padding: 80px 20px 80px 20px;
+  .feature__above {
+    width: 100%;
   }
-  .service__grid {
-    grid-template-columns: repeat(1, 1fr);
+  .feature__above__paragraph {
+    font-size: 14px;
   }
-  .menu-phone__main-phone {
-    width: 300px;
+  .feature__main__img {
+    position: static;
   }
-  input:checked ~ .menu-phone__main-phone {
-    display: block;
-    transform: translateX(-300px);
+  .feature__main__left {
+    position: static;
+    text-align: center;
+    margin-top: 12px;
+  }
+  .feature__main__imgBg {
+    height: 350px;
+    width: 100%;
+  }
+  .feauture__main__content {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature__main__img {
+    width: 120px;
+  }
+  .feature__main__title {
+    font-size: 16px;
+  }
+  .feature__main__more {
+    font-weight: 700;
+  }
+  .testimonials__left__des {
+    font-size: 14px;
+  }
+  .footer__item:nth-child(1) {
+    width: 100%;
+  }
+  .footer__item:nth-child(4) {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .footer__above {
+    justify-content: start;
+    row-gap: 30px;
+    column-gap: 40px;
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 1px;
+  }
+  // .inTitle,
+  // .tags {
+  //   display: block;
+  //   width: 100%;
+  //   /* Điều chỉnh kích thước nếu cần */
+  //   margin-bottom: 10px;
+  //   /* Thêm khoảng cách giữa các phần tử */
+  // }
+  .btnAdd {
+    height: 40px;
+    margin-right: 0px;
+    padding: 12px 40px;
+  }
+  .tags,
+  .inTitle {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .btnProfile {
+    align-items: center;
+    gap: 10px;
+    flex-direction: column-reverse;
+  }
+  .tableProfile th:nth-child(3),
+                                    /* Ẩn tiêu đề cột */
+                                    .tableProfile td:nth-child(3) {
+    /* Ẩn dữ liệu trong cột */
+    display: none;
+  }
+  .tableProfile th:nth-child(4),
+                                                                        /* Ẩn tiêu đề cột */
+                                                                        .tableProfile td:nth-child(4) {
+    /* Ẩn dữ liệu trong cột */
+    display: none;
   }
 }
