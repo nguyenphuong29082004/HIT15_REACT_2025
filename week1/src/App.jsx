@@ -1,19 +1,15 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React, { useState } from "react";
+import "./App.css";
 
-import Header from './components/Header/Header';
-import ContentSession from "./components/ContentSession/ContentSession"
-import AboutUs from "./components/AboutUs/AboutUs"
-import Footer from "./components/Footer/Footer"
-import "./components/responsive.css"
-function App() {
+import Week7 from "./components/week7/Main_week7/main_week7";
+import Main_week9 from "./components/week9/Main_week9/main_week9";
+function App() {  
   return (
     <>
-      <Header></Header>
-      <ContentSession></ContentSession>
-      <AboutUs></AboutUs>
-      <Footer></Footer>
+      {/* <Week7/> */}
+      <Main_week9/>
+      
+      
     </>
   );
 }
